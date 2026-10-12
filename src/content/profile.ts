@@ -1,5 +1,5 @@
 // Single source for every fact shown on the public site.
-// Sources: the previous site (virtual_service_pro) and the Fauwziyyah_Skills_Profile.md CV summary.
+// Sources: the CV of July 2026 (authoritative), the skills profile summary, the previous site, and themartischool.web.app.
 // Items awaiting owner confirmation are listed in planning/SPEC.md, section 13.
 
 export const person = {
@@ -7,13 +7,13 @@ export const person = {
   firstName: "Fauwzziyyah",
   lastName: "Umar",
   initials: "FU",
-  role: "School principal, data analyst, ML engineer, and founder",
+  role: "School principal, data analyst, ML engineer, and co-founder",
   disciplines: ["Data and AI", "Education", "Enterprise"],
   statement:
     "I lead a school, turn data into decisions, and build ventures in education and retail. A computer science degree, a master's in data analytics, and life across Nigeria, France, Turkey, and the United States shape how I work.",
   location: "Maryland, United States",
   workMode: "Remote-first, open to hybrid",
-  languages: "English, French, conversational Turkish",
+  languages: "English, conversational French and Turkish",
   email: "phauzee97@gmail.com",
   linkedin: "https://linkedin.com/in/fauwzziyyah-umar",
   github: "https://github.com/phauxiyarh",
@@ -28,7 +28,7 @@ export const stats: Stat[] = [
   { value: "90", suffix: "%+", label: "Crop-type classification accuracy", source: "Omdena" },
   { value: "200", suffix: "+", label: "Students mentored in STEM", source: "Kaduna State" },
   { value: "5,000", suffix: "+", label: "Participants reached by outreach", source: "Haleyouth Foundation" },
-  { value: "400", suffix: "+", label: "Titles curated as founder", source: "EduvateKids" },
+  { value: "400", suffix: "+", label: "Titles curated as co-founder", source: "EduvateKids" },
 ];
 
 export const credentialStrip = [
@@ -48,8 +48,8 @@ export const credentialStrip = [
 export const profile = {
   paragraphs: [
     "I trained as a computer scientist at Nile University of Nigeria and graduated in 2018 with a 3.69 grade point average (GPA), in the top 2% of my class. Coursework in artificial intelligence (AI), digital image processing, and network security set the direction for what came next.",
-    "Since 2021 I have built computer vision and remote-sensing pipelines as a machine learning (ML) engineer with Omdena. Since May 2025 I have worked as a data analyst at Nabafat AI, delivering ML and analytics projects in Python and SQL. In 2025 I completed a Master of Science (MSc) in Data Analytics at Western Governors University (WGU).",
-    "Since September 2026 I have served as Principal of The Marti School, a Saturday school in Columbia, Maryland. Before this I taught science, technology, engineering, and mathematics (STEM) in Nigeria and in Maryland. I also coordinate programmes for a youth nonprofit and have founded two businesses. Each strand feeds the others: teaching sharpens how I explain data, and running a business sharpens which questions deserve an answer.",
+    "Since 2021 I have built computer vision and remote-sensing pipelines as a volunteer machine learning (ML) engineer with Omdena. In June 2025 I completed a Master of Science (MSc) in Data Analytics at Western Governors University (WGU), and in 2025 I spent six months as a data analyst intern at Nabafat AI. The part of the work I value most is the front end: sitting with a team to learn what they need, building the tool, then teaching people who do not code to run the tool themselves.",
+    "Since September 2026 I have served as Principal of The Marti School, a Saturday school in Columbia, Maryland. Before this I taught science, technology, engineering, and mathematics (STEM) in Nigeria and in Maryland. I also coordinate programmes for a youth nonprofit as a volunteer and co-founded EduvateKids, an education platform. Each strand feeds the others: teaching sharpens how I explain data, and running a business sharpens which questions deserve an answer.",
   ],
   principles: [
     {
@@ -61,8 +61,8 @@ export const profile = {
       body: "A model earns its place once a person uses the output to decide something.",
     },
     {
-      title: "Teach what you know",
-      body: "Knowledge grows in value once shared, in a classroom, a workshop, or a handover document.",
+      title: "Teach and document",
+      body: "A tool outlives its builder only with plain-language guides, runbooks, and people trained to run the tool.",
     },
   ],
 };
@@ -79,7 +79,7 @@ export const expertise: Expertise[] = [
     icon: "chart",
     title: "Data analytics and business intelligence",
     body: "Exploratory analysis, statistical modelling, and dashboards for teams who need numbers they trust.",
-    skills: ["Python, SQL, R", "Power BI and Tableau", "Excel and VBA", "Data storytelling"],
+    skills: ["Python, SQL, R", "Power BI and Tableau", "Exploratory data analysis (EDA)", "Data storytelling"],
   },
   {
     icon: "brain",
@@ -89,9 +89,9 @@ export const expertise: Expertise[] = [
   },
   {
     icon: "workflow",
-    title: "Data engineering and automation",
-    body: "Pipelines and workflows to remove manual steps between raw data and a finished report.",
-    skills: ["BigQuery pipelines", "Extract, transform, load (ETL)", "Apache Airflow", "Zapier and Make"],
+    title: "AI tools and automation",
+    body: "Small AI and no-code tools for schools and youth programmes, built with the people who will run them.",
+    skills: ["Prompt design", "Zapier and Make", "Form-to-CRM workflows", "ETL with Apache Airflow"],
   },
   {
     icon: "school",
@@ -130,26 +130,24 @@ export const experience: Track[] = [
     roles: [
       {
         org: "Nabafat AI",
-        title: "Data Analyst",
+        title: "Data Analyst Intern",
         place: "Remote",
-        period: "May 2025 to present",
+        period: "2025, six-month internship",
         points: [
-          "Delivered six or more end-to-end ML and analytics projects in Python and SQL.",
-          "Raised programme engagement by 35% through business insights acted on by the team.",
-          "Improved business-to-business (B2B) customer retention by 20% with ETL and BigQuery analysis.",
-          "Built Power BI and Tableau dashboards which cut manual reporting time by 20%.",
+          "Delivered end-to-end analytics and ML projects in Python and SQL, so programme managers saw which cohorts were slipping without a manual data pull.",
+          "Built Power BI and Tableau dashboards which cut manual reporting time by 20% and let non-technical teammates answer their own questions.",
+          "Documented data flows and reporting standards so anyone on the team found the numbers.",
         ],
       },
       {
         org: "Omdena",
-        title: "Junior Machine Learning Engineer",
+        title: "Machine Learning Engineer (volunteer)",
         place: "Remote",
-        period: "March 2021 to present",
+        period: "2021 to present",
         points: [
           "Built computer vision and remote-sensing pipelines with Python, OpenCV, and TensorFlow.",
-          "Reached over 90% accuracy on crop-type classification from multispectral satellite imagery.",
-          "Located solar-panel sites with vegetation indices and object detection, cutting manual survey time by 40%.",
-          "Reduced inference latency by 35% through GPU acceleration and tensor batching.",
+          "Reached over 90% accuracy on crop-type classification from satellite imagery.",
+          "Cut manual survey time by 40% by automating solar-site selection, with results in a dashboard the field team used to pick sites.",
         ],
       },
     ],
@@ -174,22 +172,21 @@ export const experience: Track[] = [
         org: "Prince George's County Public Schools",
         title: "STEM Educator and Substitute Teacher",
         place: "Laurel, Maryland",
-        period: "May 2024 to August 2024",
+        period: "2024",
         points: [
-          "Taught STEM subjects across grade levels.",
-          "Adapted lessons to student needs and reviewed student progress.",
+          "Taught STEM classes across grade levels, often at short notice.",
+          "Learned from resident teachers what worked for each class and adapted lessons to suit the day.",
         ],
       },
       {
         org: "Kaduna State Government Education Board",
-        title: "STEM Instructor",
+        title: "STEM Instructor (contract)",
         place: "Kaduna, Nigeria",
-        period: "May 2021 to January 2022",
+        period: "2021 to 2022",
         points: [
-          "Designed a project-based STEM curriculum for grades 7 to 12.",
-          "Mentored over 200 students and guided 15 groups through capstone projects in engineering, coding, and data analysis.",
-          "Trained 12 teachers in STEM teaching methods and technology use.",
-          "Raised science fair and club participation by 30%.",
+          "Built a project-based STEM curriculum for grades 7 to 12 and ran weekly workshops and capstone tracks across schools.",
+          "Mentored over 200 students.",
+          "Trained 12 teachers on Google Classroom and digital tools, lifting STEM lesson adoption by 20%.",
         ],
       },
       {
@@ -210,24 +207,24 @@ export const experience: Track[] = [
     roles: [
       {
         org: "EduvateKids",
-        title: "Founder",
+        title: "Co-Founder and Chief Executive Officer",
         place: "Maryland, United States",
-        period: "2021 to present",
+        period: "2023 to present",
         points: [
-          "Founded an Islamic educational bookstore and learning resource platform for families, schools, and communities in North America.",
-          "Grew the catalogue to over 400 curated titles and runs more than 50 learning events a year.",
+          "Co-founded and runs an Islamic education platform for families and schools across North America, with over 400 curated titles and more than 50 learning events a year.",
+          "Automated registration, reminder, and reporting workflows with AI assistants, Zapier, and Make, and reviews every AI-drafted answer before the answer reaches families.",
           "Manages partnerships with publishers including Learning Roots and Kube Publishing.",
         ],
       },
       {
         org: "Haleyouth Foundation",
-        title: "Programme Coordinator",
+        title: "Programme Coordinator (volunteer)",
         place: "Nigeria, remote",
-        period: "March 2020 to present",
+        period: "2020 to present",
         points: [
-          "Coordinated over 20 outreach initiatives, online and in person, reaching more than 5,000 participants.",
-          "Grew social media engagement by 60% and newsletter reach by 50%.",
-          "Supports programmes in STEM education, digital skills, girl-child health, and career advice.",
+          "Coordinates over 20 concurrent programmes, online and in person, for more than 5,000 participants in youth empowerment, girl-child education, and STEM.",
+          "Interviews participants and partners to learn what they need, then assigns and supports volunteers on each piece of work.",
+          "Grew newsletter reach by 50% and social media engagement by 60% on a volunteer budget.",
         ],
       },
       {
@@ -237,8 +234,7 @@ export const experience: Track[] = [
         period: "January 2017 to present",
         points: [
           "Built a women's apparel brand with more than 50 retail partners.",
-          "Recorded 120% year-on-year revenue growth for three consecutive years.",
-          "Leads a team of eight across operations, supplier contracts, and quality control.",
+          "Runs operations, supplier contracts, and quality control.",
         ],
       },
     ],
@@ -261,7 +257,7 @@ export const work: Work[] = [
     title: "Crop-type classification from satellite imagery",
     context: "Collaborative AI project with a distributed international team.",
     contribution:
-      "Built a computer vision pipeline on multispectral satellite imagery which reached over 90% classification accuracy, with outputs fed into stakeholder dashboards.",
+      "Built a computer vision pipeline on satellite imagery which reached over 90% crop-type classification accuracy.",
     tools: ["Python", "TensorFlow", "OpenCV", "Multispectral imagery"],
   },
   {
@@ -270,8 +266,8 @@ export const work: Work[] = [
     title: "Solar-panel site selection",
     context: "Geospatial analysis for renewable energy planning.",
     contribution:
-      "Combined the normalised difference vegetation index (NDVI), the normalised burn ratio (NBR), and object detection to rank sites, cutting manual survey time by 40%.",
-    tools: ["NDVI and NBR", "Object detection", "Python", "GPU acceleration"],
+      "Automated solar-site selection, cutting manual survey time by 40%, and put the results into a dashboard the field team used to pick sites.",
+    tools: ["Python", "Remote sensing", "Object detection", "Dashboards"],
   },
   {
     tag: "Healthcare analytics",
@@ -279,7 +275,7 @@ export const work: Work[] = [
     title: "Predicting diabetes progression",
     context: "MSc capstone at Western Governors University.",
     contribution:
-      "Built and evaluated ML models to predict diabetes progression from clinical measurements, and reported the results with their limits.",
+      "Ran the full cycle for predicting diabetes progression with ML: data preparation, modelling, evaluation, and a written story of the results and their limits.",
     tools: ["Python", "Scikit-learn", "Pandas", "Statistical testing"],
   },
   {
@@ -317,8 +313,8 @@ export const journey: Milestone[] = [
   },
   {
     year: "2021",
-    title: "ML engineering, STEM teaching, and EduvateKids",
-    body: "Joined Omdena as an ML engineer, taught STEM for the Kaduna State Government Education Board, and founded EduvateKids.",
+    title: "ML engineering and STEM teaching",
+    body: "Began volunteer ML engineering with Omdena and taught STEM for the Kaduna State Government Education Board.",
   },
   {
     year: "2022",
@@ -326,14 +322,24 @@ export const journey: Milestone[] = [
     body: "Google Data Analytics, the Udacity Data Analyst Nanodegree, and Power BI Data Analyst.",
   },
   {
+    year: "2023",
+    title: "Co-Founder and CEO, EduvateKids",
+    body: "Co-founded an Islamic education platform for families and schools across North America.",
+  },
+  {
     year: "2024",
     title: "STEM Educator, Prince George's County Public Schools",
     body: "Classroom STEM teaching across grade levels in Laurel, Maryland.",
   },
   {
+    year: "June 2025",
+    title: "MSc Data Analytics, Western Governors University",
+    body: "Decision Process Engineering focus, a capstone on diabetes progression, and three micro-credential awards.",
+  },
+  {
     year: "2025",
-    title: "MSc Data Analytics and Nabafat AI",
-    body: "Completed the MSc at WGU with three micro-credential awards, and joined Nabafat AI as a data analyst.",
+    title: "Data Analyst Intern, Nabafat AI",
+    body: "A six-month internship delivering analytics and ML projects, dashboards, and reporting standards.",
   },
   {
     year: "2026",
@@ -350,7 +356,7 @@ export const journey: Milestone[] = [
 export type Credential = { title: string; issuer: string; year: string };
 
 export const certifications: Credential[] = [
-  { title: "Power BI Data Analyst Professional", issuer: "Foresight BI and Analytics, WiDA scholarship", year: "2022" },
+  { title: "Power BI Data Analyst, Microsoft Certified", issuer: "Foresight BI, WiDA scholarship", year: "2022" },
   { title: "Google Data Analytics Professional", issuer: "Google, via Coursera", year: "2022" },
   { title: "Data Analyst Nanodegree", issuer: "Udacity, ALX scholarship", year: "2022" },
   { title: "ML Engineering, computer vision and TensorFlow", issuer: "Omdena", year: "2021 to present" },
@@ -375,11 +381,12 @@ export const learningFocus = [
 ];
 
 export const toolkit: { group: string; items: string[] }[] = [
-  { group: "Analytics and visualisation", items: ["Python", "SQL", "R", "Pandas", "NumPy", "Power BI", "Tableau", "Excel"] },
-  { group: "Machine learning", items: ["Scikit-learn", "TensorFlow", "PyTorch", "Hugging Face", "OpenCV", "Spark MLlib"] },
-  { group: "Cloud and data", items: ["BigQuery", "Snowflake", "Databricks", "AWS SageMaker", "Azure ML"] },
-  { group: "Pipelines and MLOps", items: ["Apache Airflow", "MLflow", "DVC", "Kubeflow", "Docker", "Kubernetes"] },
-  { group: "Automation", items: ["Zapier", "Make", "LLM integration", "No-code AI tools"] },
+  { group: "Data and analysis", items: ["Python", "Pandas", "NumPy", "SQL", "R", "Excel"] },
+  { group: "Machine learning", items: ["Scikit-learn", "TensorFlow", "PyTorch", "OpenCV", "Hugging Face Transformers"] },
+  { group: "BI and visualisation", items: ["Power BI", "Tableau", "Data storytelling"] },
+  { group: "Cloud and pipelines", items: ["Google BigQuery", "AWS SageMaker", "Apache Airflow"] },
+  { group: "AI and automation", items: ["ChatGPT", "Notion AI", "Zapier", "Make", "Prompt design"] },
+  { group: "Teaching and enablement", items: ["Teacher training", "Workshop facilitation", "Curriculum design", "Runbooks and FAQs"] },
 ];
 
 export type EnquiryType = "role" | "consulting" | "research" | "speaking" | "support" | "other";

@@ -22,7 +22,7 @@ const jsonLd = {
   url: siteUrl,
   worksFor: [
     { "@type": "EducationalOrganization", name: "The Marti School", url: "https://themartischool.web.app" },
-    { "@type": "Organization", name: "Nabafat AI" },
+    { "@type": "Organization", name: "EduvateKids" },
   ],
   email: `mailto:${person.email}`,
   sameAs: [person.linkedin, person.github],

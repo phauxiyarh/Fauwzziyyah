@@ -99,15 +99,15 @@ export function Hero() {
               <div>
                 <dt className="sr-only">Current roles</dt>
                 <dd className="text-ivory">Principal, The Marti School</dd>
-                <dd className="text-mist">Data Analyst, Nabafat AI. ML Engineer, Omdena</dd>
+                <dd className="text-mist">ML Engineer (volunteer), Omdena, since 2021</dd>
               </div>
             </div>
             <div className="flex gap-3">
               <Store aria-hidden className="mt-0.5 size-4 shrink-0 text-brass" />
               <div>
                 <dt className="sr-only">Ventures</dt>
-                <dd className="text-ivory">Founder, EduvateKids and MeeFa Fashion</dd>
-                <dd className="text-mist">Programme Coordinator, Haleyouth Foundation</dd>
+                <dd className="text-ivory">Co-Founder and CEO, EduvateKids</dd>
+                <dd className="text-mist">Programme Coordinator, Haleyouth Foundation (volunteer)</dd>
               </div>
             </div>
             <div className="flex gap-3">
