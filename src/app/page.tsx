@@ -20,14 +20,17 @@ const jsonLd = {
   name: person.name,
   jobTitle: person.role,
   url: siteUrl,
-  worksFor: { "@type": "Organization", name: "Nabafat AI" },
+  worksFor: [
+    { "@type": "EducationalOrganization", name: "The Marti School", url: "https://themartischool.web.app" },
+    { "@type": "Organization", name: "Nabafat AI" },
+  ],
   email: `mailto:${person.email}`,
   sameAs: [person.linkedin, person.github],
   alumniOf: [
     { "@type": "CollegeOrUniversity", name: "Western Governors University" },
     { "@type": "CollegeOrUniversity", name: "Nile University of Nigeria" },
   ],
-  knowsAbout: ["Data analytics", "Machine learning", "Computer vision", "STEM education", "Programme coordination"],
+  knowsAbout: ["School leadership", "Data analytics", "Machine learning", "Computer vision", "STEM education", "Programme coordination"],
 };
 
 export default function Home() {

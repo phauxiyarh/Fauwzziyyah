@@ -98,8 +98,8 @@ export function Hero() {
               <BriefcaseBusiness aria-hidden className="mt-0.5 size-4 shrink-0 text-brass" />
               <div>
                 <dt className="sr-only">Current roles</dt>
-                <dd className="text-ivory">Data Analyst, Nabafat AI</dd>
-                <dd className="text-mist">ML Engineer, Omdena, since 2021</dd>
+                <dd className="text-ivory">Principal, The Marti School</dd>
+                <dd className="text-mist">Data Analyst, Nabafat AI. ML Engineer, Omdena</dd>
               </div>
             </div>
             <div className="flex gap-3">

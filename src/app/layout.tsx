@@ -8,19 +8,19 @@ const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 const jetbrains = JetBrains_Mono({ variable: "--font-jetbrains", subsets: ["latin"], weight: ["400", "500"] });
 
 const description =
-  "Fauwzziyyah Umar is a data scientist and AI engineer with an MSc in Data Analytics from Western Governors University, working across machine learning, analytics, automation, and research.";
+  "Fauwzziyyah Umar is Principal of The Marti School, a data analyst and machine learning engineer, and an education founder, with an MSc in Data Analytics from Western Governors University.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: `${person.name} · Data Scientist and AI Engineer`,
+    default: `${person.name} · Data, AI, and Education Leader`,
     template: `%s · ${person.name}`,
   },
   description,
   authors: [{ name: person.name }],
   openGraph: {
     type: "profile",
-    title: `${person.name} · Data Scientist and AI Engineer`,
+    title: `${person.name} · Data, AI, and Education Leader`,
     description,
     url: siteUrl,
     siteName: person.name,

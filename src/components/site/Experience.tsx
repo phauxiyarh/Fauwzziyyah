@@ -20,7 +20,7 @@ export function Experience() {
               Three strands, <span className="text-brass-deep italic">one practice.</span>
             </>
           }
-          lede="Data and AI roles, classroom teaching, and the ventures and programmes I lead. Figures come from each role's own reporting."
+          lede="Data and AI roles, school leadership and teaching, and the ventures and programmes I lead. Figures come from each role's own reporting."
         />
 
         <div role="tablist" aria-label="Experience by strand" className="reveal mt-12 flex flex-wrap gap-2">

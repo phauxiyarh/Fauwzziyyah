@@ -7,10 +7,10 @@ export const person = {
   firstName: "Fauwzziyyah",
   lastName: "Umar",
   initials: "FU",
-  role: "Data analyst, ML engineer, educator, and founder",
+  role: "School principal, data analyst, ML engineer, and founder",
   disciplines: ["Data and AI", "Education", "Enterprise"],
   statement:
-    "I turn data into decisions, teach the next generation of builders, and run ventures in education and retail. A computer science degree, a master's in data analytics, and life across Nigeria, France, Turkey, and the United States shape how I work.",
+    "I lead a school, turn data into decisions, and build ventures in education and retail. A computer science degree, a master's in data analytics, and life across Nigeria, France, Turkey, and the United States shape how I work.",
   location: "Maryland, United States",
   workMode: "Remote-first, open to hybrid",
   languages: "English, French, conversational Turkish",
@@ -32,6 +32,7 @@ export const stats: Stat[] = [
 ];
 
 export const credentialStrip = [
+  "The Marti School",
   "Western Governors University",
   "Nabafat AI",
   "Omdena",
@@ -48,7 +49,7 @@ export const profile = {
   paragraphs: [
     "I trained as a computer scientist at Nile University of Nigeria and graduated in 2018 with a 3.69 grade point average (GPA), in the top 2% of my class. Coursework in artificial intelligence (AI), digital image processing, and network security set the direction for what came next.",
     "Since 2021 I have built computer vision and remote-sensing pipelines as a machine learning (ML) engineer with Omdena. Since May 2025 I have worked as a data analyst at Nabafat AI, delivering ML and analytics projects in Python and SQL. In 2025 I completed a Master of Science (MSc) in Data Analytics at Western Governors University (WGU).",
-    "Alongside the technical work, I teach and I build. I have taught science, technology, engineering, and mathematics (STEM) in Nigeria and in Maryland, coordinate programmes for a youth nonprofit, and founded two businesses. Each strand feeds the others: teaching sharpens how I explain data, and running a business sharpens which questions deserve an answer.",
+    "Since September 2026 I have served as Principal of The Marti School, a Saturday school in Columbia, Maryland. Before this I taught science, technology, engineering, and mathematics (STEM) in Nigeria and in Maryland. I also coordinate programmes for a youth nonprofit and have founded two businesses. Each strand feeds the others: teaching sharpens how I explain data, and running a business sharpens which questions deserve an answer.",
   ],
   principles: [
     {
@@ -94,9 +95,9 @@ export const expertise: Expertise[] = [
   },
   {
     icon: "school",
-    title: "STEM education and curriculum",
-    body: "Project-based teaching for middle and secondary learners, and training for teachers adopting technology.",
-    skills: ["Curriculum design", "Capstone coaching", "Teacher training", "Workshop facilitation"],
+    title: "School leadership and STEM education",
+    body: "Leading a school community of students, teachers, and parents, built on years of project-based STEM teaching.",
+    skills: ["School leadership", "Teacher development", "Curriculum design", "Parent partnership"],
   },
   {
     icon: "users",
@@ -155,8 +156,20 @@ export const experience: Track[] = [
   },
   {
     key: "education",
-    label: "Education",
+    label: "Education and school leadership",
     roles: [
+      {
+        org: "The Marti School",
+        title: "Principal",
+        place: "Columbia, Maryland",
+        period: "September 2026 to present",
+        points: [
+          "Leads the Saturday school of the Maryland Turkish-American Inhabitants, with classes in Turkish language, Quran and Islamic studies, performance, and enrichment.",
+          "Sets the academic direction so every student learns with confidence, builds good character, and achieves at a level suited to each child.",
+          "Leads, supports, and develops the teaching team, from lesson planning and ability grouping to classroom practice.",
+          "Partners with parents through admissions, open days, termly progress reports, and the online family portal.",
+        ],
+      },
       {
         org: "Prince George's County Public Schools",
         title: "STEM Educator and Substitute Teacher",
@@ -323,8 +336,13 @@ export const journey: Milestone[] = [
     body: "Completed the MSc at WGU with three micro-credential awards, and joined Nabafat AI as a data analyst.",
   },
   {
+    year: "2026",
+    title: "Principal, The Marti School",
+    body: "Leading a Saturday school in Columbia, Maryland, and its community of students, teachers, and parents.",
+  },
+  {
     year: "Now",
-    title: "Building toward applied AI leadership",
+    title: "Leading where data and education meet",
     body: "Taking on roles and projects where analysis, ML, and education meet a real decision.",
   },
 ];
@@ -367,7 +385,7 @@ export const toolkit: { group: string; items: string[] }[] = [
 export type EnquiryType = "role" | "consulting" | "research" | "speaking" | "support" | "other";
 
 export const engagements: { type: EnquiryType; title: string; body: string }[] = [
-  { type: "role", title: "Full-time and contract roles", body: "Data analyst, ML engineer, business intelligence, and EdTech positions." },
+  { type: "role", title: "Full-time and contract roles", body: "Data analyst, ML engineer, business intelligence, EdTech, and education leadership positions." },
   { type: "consulting", title: "Consulting projects", body: "Scoped analytics, dashboard, or automation work with a clear outcome." },
   { type: "research", title: "Education and impact partnerships", body: "Programmes, curricula, and research with schools and nonprofits." },
   { type: "speaking", title: "Speaking and mentoring", body: "Talks, workshops, and mentoring for people entering data and STEM careers." },
