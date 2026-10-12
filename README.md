@@ -23,10 +23,10 @@ Without `.env.local` the site still renders. The contact form shows a preview no
 ## Firebase setup (one time)
 
 1. In the Firebase console for project `fauwzziyyah`, add a **Web app** and copy its configuration into `.env.local`.
-2. Enable **Authentication > Sign-in method > Email/Password**.
+2. Enable **Authentication > Sign-in method > Google**.
 3. Create **Firestore** in production mode.
 4. Deploy the rules: `firebase deploy --only firestore`.
-5. Create the admin user under **Authentication > Users**, copy the user's UID, then add a Firestore document at `admins/{UID}` with a field `email` (string). Only this collection grants admin access, and no browser writes to it.
+5. Admin access goes to verified Google accounts listed in `ADMIN_EMAILS`, set in both `firestore.rules` and `src/lib/firebase/admin-auth.ts`. To add someone, add the email in both places and redeploy. A document at `admins/{UID}`, written from the Firebase console, also grants access.
 
 ## Deploy
 
@@ -48,10 +48,10 @@ Automatic: the workflow in `.github/workflows/deploy.yml` builds and deploys on 
 
 ## Admin
 
-Visit `/admin`, sign in, and manage enquiries: filter by status or type, add private notes, reply by email, and delete. The **Settings** tab controls the availability badge in the hero.
+Use the gear icon in the footer, or visit `/admin`, then continue with Google. Manage enquiries: filter by status or type, add private notes, reply by email, and delete. The **Settings** tab controls the availability badge in the hero.
 
 ## Security model
 
 - Visitors create enquiries only. The Firestore rule checks every field, its type, and its length.
-- Only accounts listed in `admins/{uid}` read, update, or delete enquiries.
+- Only the allowed Google accounts, or accounts listed in `admins/{uid}`, read, update, or delete enquiries.
 - The Firebase web configuration is public by design. Access control sits in [`firestore.rules`](firestore.rules).

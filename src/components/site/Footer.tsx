@@ -1,4 +1,5 @@
-import { ArrowUp, Mail } from "lucide-react";
+import Link from "next/link";
+import { ArrowUp, Mail, Settings } from "lucide-react";
 import { nav, person } from "@/content/profile";
 import { GitHubIcon, LinkedInIcon } from "./BrandIcons";
 
@@ -48,11 +49,24 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col-reverse gap-6 border-t border-line-dark pt-8 text-sm text-mist sm:flex-row sm:items-center sm:justify-between">
-          <p>
+        <div className="mt-16 grid grid-cols-1 items-center gap-4 border-t border-line-dark pt-8 text-sm text-mist sm:grid-cols-[1fr_auto_1fr]">
+          <p className="order-3 text-center sm:order-1 sm:text-left">
             © {year} {person.name}. {person.location}.
           </p>
-          <a href="#top" className="inline-flex min-h-11 items-center gap-2 transition-colors hover:text-ivory">
+          <div className="order-1 flex justify-center sm:order-2">
+            <Link
+              href="/admin/"
+              aria-label="Admin sign-in"
+              title="Admin"
+              className="group grid size-11 place-items-center rounded-full bg-ivory/[0.04] text-ivory/45 transition-colors duration-500 hover:bg-ivory/10 hover:text-brass"
+            >
+              <Settings aria-hidden className="size-4 transition-transform duration-700 ease-out group-hover:rotate-90" />
+            </Link>
+          </div>
+          <a
+            href="#top"
+            className="order-2 inline-flex min-h-11 items-center justify-center gap-2 transition-colors hover:text-ivory sm:order-3 sm:justify-self-end"
+          >
             Back to top
             <ArrowUp aria-hidden className="size-4" />
           </a>

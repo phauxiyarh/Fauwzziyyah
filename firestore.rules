@@ -7,10 +7,16 @@ service cloud.firestore {
       return request.auth != null;
     }
 
-    // Admin access is granted by a document at admins/{uid}.
-    // Only the Firebase console or the Admin SDK writes to that collection.
+    // Admin access: a verified Google sign-in with an allowed email, or a document at admins/{uid}.
+    // Keep ADMIN_EMAILS in step with src/lib/firebase/admin-auth.ts.
+    // Only the Firebase console or the Admin SDK writes to the admins collection.
     function isAdmin() {
-      return signedIn() && exists(/databases/$(database)/documents/admins/$(request.auth.uid));
+      return signedIn() && (
+        (request.auth.token.firebase.sign_in_provider == 'google.com'
+          && request.auth.token.email_verified == true
+          && request.auth.token.email in ['phauzee97@gmail.com'])
+        || exists(/databases/$(database)/documents/admins/$(request.auth.uid))
+      );
     }
 
     function isText(v, min, max) {
