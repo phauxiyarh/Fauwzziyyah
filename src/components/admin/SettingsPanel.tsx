@@ -29,8 +29,9 @@ export function SettingsPanel() {
   }
 
   return (
-    <div className="mx-auto max-w-2xl px-4 py-10 md:px-6">
-      <h1 className="font-serif-display text-4xl md:text-5xl">Site settings</h1>
+    <div className="max-w-2xl">
+      <p className="eyebrow text-brass-deep">Public site</p>
+      <h1 className="font-serif-display mt-2 text-4xl text-ink md:text-5xl">Site settings</h1>
       <p className="mt-2 text-stone">Controls the availability badge at the top of the home page.</p>
 
       {!s ? (

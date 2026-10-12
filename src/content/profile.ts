@@ -120,6 +120,7 @@ export const expertise: Expertise[] = [
 
 export type Role = {
   org: string;
+  url?: string;
   title: string;
   place: string;
   period: string;
@@ -163,6 +164,7 @@ export const experience: Track[] = [
     roles: [
       {
         org: "The Marti School",
+        url: "https://themartischool.web.app",
         title: "Principal",
         place: "Columbia, Maryland",
         period: "September 2026 to present",
@@ -212,6 +214,7 @@ export const experience: Track[] = [
     roles: [
       {
         org: "EduvateKids",
+        url: "https://eduvatekids.com",
         title: "Co-Founder and Chief Executive Officer",
         place: "Maryland, United States",
         period: "2023 to present",
@@ -247,6 +250,7 @@ export const experience: Track[] = [
 ];
 
 export type Work = {
+  url?: string;
   tag: string;
   year: string;
   title: string;
@@ -275,6 +279,7 @@ export const work: Work[] = [
     tools: ["Python", "Scikit-learn", "Pandas", "Statistical testing"],
   },
   {
+    url: "https://eduvatekids.com",
     tag: "Workflow automation",
     year: "2023 to present",
     title: "AI workflows for an education platform",

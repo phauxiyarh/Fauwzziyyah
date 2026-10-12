@@ -107,7 +107,16 @@ export default function CvPage() {
                     {track.roles.map((r) => (
                       <div key={r.org} className="print:break-inside-avoid">
                         <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6">
-                          <p className="font-serif-display text-[1.45rem] leading-tight text-ink">{r.org}</p>
+                          <p className="font-serif-display text-[1.45rem] leading-tight text-ink">
+                            {r.url ? (
+                              <a href={r.url} target="_blank" rel="noopener noreferrer" className="underline decoration-brass/60 decoration-1 underline-offset-4 hover:decoration-ink">
+                                {r.org}
+                                <span className="sr-only"> (opens in a new tab)</span>
+                              </a>
+                            ) : (
+                              r.org
+                            )}
+                          </p>
                           <p className="shrink-0 font-mono text-xs text-stone">{r.period}</p>
                         </div>
                         <p className="mt-1 text-sm text-stone">

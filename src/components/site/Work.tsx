@@ -1,3 +1,4 @@
+import { ArrowUpRight } from "lucide-react";
 import { work } from "@/content/profile";
 import { SectionHeader } from "./SectionHeader";
 
@@ -33,6 +34,18 @@ export function Work() {
                 </p>
                 <h3 className="font-serif-display mt-3 text-3xl leading-tight md:text-4xl">{w.title}</h3>
                 <p className="mt-3 text-mist">{w.context}</p>
+                {w.url && (
+                  <a
+                    href={w.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 inline-flex min-h-11 items-center gap-1.5 text-sm text-brass transition-colors hover:text-ivory"
+                  >
+                    {w.url.replace(/^https?:\/\//, "")}
+                    <ArrowUpRight aria-hidden className="size-4" />
+                    <span className="sr-only">(opens in a new tab)</span>
+                  </a>
+                )}
               </div>
               <div>
                 <p className="text-[1.0625rem] leading-relaxed text-ivory/90">{w.contribution}</p>
