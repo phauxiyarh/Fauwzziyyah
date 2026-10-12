@@ -1,0 +1,66 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    // Admin access is granted by a document at admins/{uid}.
+    // Only the Firebase console or the Admin SDK writes to that collection.
+    function isAdmin() {
+      return signedIn() && exists(/databases/$(database)/documents/admins/$(request.auth.uid));
+    }
+
+    function isText(v, min, max) {
+      return v is string && v.size() >= min && v.size() <= max;
+    }
+
+    function validNewEnquiry(d) {
+      return d.keys().hasOnly(['name', 'email', 'organisation', 'type', 'message', 'status', 'note', 'createdAt', 'updatedAt'])
+        && d.keys().hasAll(['name', 'email', 'type', 'message', 'status', 'createdAt'])
+        && isText(d.name, 2, 100)
+        && isText(d.email, 5, 200)
+        && d.email.matches('^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$')
+        && (!('organisation' in d) || isText(d.organisation, 0, 120))
+        && d.type in ['role', 'consulting', 'research', 'speaking', 'support', 'other']
+        && isText(d.message, 20, 2000)
+        && d.status == 'new'
+        && (!('note' in d) || d.note == '')
+        && d.createdAt == request.time
+        && (!('updatedAt' in d) || d.updatedAt == request.time);
+    }
+
+    // Public visitors create enquiries. They never read, edit, or delete them.
+    match /enquiries/{id} {
+      allow create: if validNewEnquiry(request.resource.data);
+      allow read, delete: if isAdmin();
+      allow update: if isAdmin()
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['status', 'note', 'updatedAt'])
+        && request.resource.data.status in ['new', 'reviewing', 'replied', 'closed', 'archived']
+        && isText(request.resource.data.note, 0, 4000)
+        && request.resource.data.updatedAt == request.time;
+    }
+
+    // Availability and status line shown in the hero.
+    match /settings/public {
+      allow read: if true;
+      allow write: if isAdmin()
+        && request.resource.data.keys().hasOnly(['available', 'statusLine', 'updatedAt'])
+        && request.resource.data.available is bool
+        && isText(request.resource.data.statusLine, 0, 120)
+        && request.resource.data.updatedAt == request.time;
+    }
+
+    // A signed-in user reads only their own admin record. No client writes.
+    match /admins/{uid} {
+      allow read: if signedIn() && request.auth.uid == uid;
+      allow write: if false;
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
