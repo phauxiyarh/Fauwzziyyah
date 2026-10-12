@@ -80,7 +80,7 @@ export const education = [
 
 export const languages = [
   { name: "English", level: "Full professional" },
-  { name: "French", level: "Conversational, lived and studied in France" },
+  { name: "French", level: "Conversational, lived in France" },
   { name: "Turkish", level: "Conversational, lived and studied in Turkey" },
 ];
 
