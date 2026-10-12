@@ -7,7 +7,7 @@ export type PublicSettings = { available: boolean; statusLine: string };
 
 export const defaultSettings: PublicSettings = {
   available: true,
-  statusLine: "Open to data, AI, and education roles, projects, and partnerships",
+  statusLine: "Open to education, research, and data roles and collaborations",
 };
 
 export async function readSettings(): Promise<PublicSettings> {

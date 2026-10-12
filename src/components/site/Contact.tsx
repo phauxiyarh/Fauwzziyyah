@@ -79,12 +79,12 @@ export function Contact() {
     ) : null;
 
   return (
-    <section id="contact" className="on-dark relative overflow-hidden bg-ink py-24 text-ivory md:py-36">
+    <section id="contact" className="on-dark relative overflow-hidden bg-ink py-20 text-ivory md:py-28">
       <div aria-hidden className="absolute -bottom-40 -left-40 size-[36rem] rounded-full bg-navy-2/60 blur-[120px]" />
       <div className="container-site relative grid grid-cols-1 gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
         <div className="reveal">
           <p className="eyebrow flex items-center gap-3 text-brass">
-            <span>09</span>
+            <span>05</span>
             <span aria-hidden className="h-px w-8 bg-brass/60" />
             <span>Contact</span>
           </p>
@@ -92,7 +92,7 @@ export function Contact() {
             Tell me about the <span className="text-brass italic">problem.</span>
           </h2>
           <p className="mt-6 max-w-md text-lg leading-relaxed text-mist">
-            Roles, projects, research, or a first conversation. I reply to every message within two business days.
+            Roles, research, collaborations, or a first conversation. I reply to every message within two business days.
           </p>
 
           <ul className="mt-12 space-y-5">

@@ -1,17 +1,13 @@
 import { person, siteUrl } from "@/content/profile";
 import { Contact } from "@/components/site/Contact";
-import { CredentialStrip } from "@/components/site/CredentialStrip";
-import { Engage } from "@/components/site/Engage";
-import { Experience } from "@/components/site/Experience";
+import { CvTeaser } from "@/components/site/CvTeaser";
 import { Expertise } from "@/components/site/Expertise";
 import { Footer } from "@/components/site/Footer";
-import { Growth } from "@/components/site/Growth";
 import { Hero } from "@/components/site/Hero";
-import { Journey } from "@/components/site/Journey";
 import { Nav } from "@/components/site/Nav";
 import { Profile } from "@/components/site/Profile";
+import { Research } from "@/components/site/Research";
 import { RevealObserver } from "@/components/site/RevealObserver";
-import { Toolkit } from "@/components/site/Toolkit";
 import { Work } from "@/components/site/Work";
 
 const jsonLd = {
@@ -30,7 +26,7 @@ const jsonLd = {
     { "@type": "CollegeOrUniversity", name: "Western Governors University" },
     { "@type": "CollegeOrUniversity", name: "Nile University of Nigeria" },
   ],
-  knowsAbout: ["School leadership", "Data analytics", "Machine learning", "Computer vision", "STEM education", "Programme coordination"],
+  knowsAbout: ["School leadership", "Learning analytics", "AI in education", "Teacher development", "STEM education", "Data analytics"],
 };
 
 export default function Home() {
@@ -45,15 +41,11 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
-        <CredentialStrip />
         <Profile />
+        <Research />
         <Expertise />
-        <Experience />
         <Work />
-        <Journey />
-        <Growth />
-        <Toolkit />
-        <Engage />
+        <CvTeaser />
         <Contact />
       </main>
       <Footer />

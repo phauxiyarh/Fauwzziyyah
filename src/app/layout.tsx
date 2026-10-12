@@ -8,19 +8,19 @@ const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 const jetbrains = JetBrains_Mono({ variable: "--font-jetbrains", subsets: ["latin"], weight: ["400", "500"] });
 
 const description =
-  "Fauwzziyyah Umar is Principal of The Marti School, a data analyst and machine learning engineer, and an education founder, with an MSc in Data Analytics from Western Governors University.";
+  "Fauwzziyyah Umar is a school principal, educator, and data analyst with an MSc in Data Analytics from Western Governors University. Her work joins school leadership, learning data, and AI tools for teachers and students.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: `${person.name} · Data, AI, and Education Leader`,
+    default: `${person.name} · Education, Data, and AI`,
     template: `%s · ${person.name}`,
   },
   description,
   authors: [{ name: person.name }],
   openGraph: {
     type: "profile",
-    title: `${person.name} · Data, AI, and Education Leader`,
+    title: `${person.name} · Education, Data, and AI`,
     description,
     url: siteUrl,
     siteName: person.name,

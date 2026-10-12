@@ -155,3 +155,44 @@
     scroll-behavior: auto;
   }
 }
+
+/* Hero portrait: fade into the page on the top, left, and bottom edges. */
+.hero-photo {
+  -webkit-mask-image:
+    linear-gradient(to right, transparent 0%, rgb(0 0 0 / 0.55) 22%, black 48%),
+    linear-gradient(to bottom, transparent 0%, black 22%, black 52%, transparent 80%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to right, transparent 0%, rgb(0 0 0 / 0.55) 22%, black 48%),
+    linear-gradient(to bottom, transparent 0%, black 22%, black 52%, transparent 80%);
+  mask-composite: intersect;
+}
+.hero-photo img {
+  filter: saturate(0.95) brightness(0.92);
+}
+.hero-photo-mobile {
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 22%, black 55%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, black 22%, black 55%, transparent 100%);
+}
+
+/* Fluid hover pill behind the top menu links. */
+.nav-pill {
+  transition:
+    transform 450ms var(--ease-out-soft),
+    width 450ms var(--ease-out-soft),
+    opacity 300ms ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .nav-pill {
+    transition: opacity 150ms ease;
+  }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: #fff !important;
+  }
+}

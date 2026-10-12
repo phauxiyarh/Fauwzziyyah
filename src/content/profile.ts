@@ -7,10 +7,10 @@ export const person = {
   firstName: "Fauwzziyyah",
   lastName: "Umar",
   initials: "FU",
-  role: "School principal, data analyst, ML engineer, and co-founder",
-  disciplines: ["Data and AI", "Education", "Enterprise"],
+  role: "School principal, educator, and data analyst",
+  disciplines: ["Education", "Data", "AI"],
   statement:
-    "I lead a school, turn data into decisions, and build ventures in education and retail. A computer science degree, a master's in data analytics, and life across Nigeria, France, Turkey, and the United States shape how I work.",
+    "I lead a school and use data and AI to help students learn and teachers teach. My work rests on a computer science degree, a master's in data analytics, and classrooms and communities in Nigeria and the United States.",
   location: "Maryland, United States",
   workMode: "Remote-first, open to hybrid",
   languages: "English, conversational French and Turkish",
@@ -25,27 +25,15 @@ export type Stat = { value: string; suffix: string; label: string; source: strin
 
 // Each figure comes from a named role in the CV summary.
 export const stats: Stat[] = [
-  { value: "90", suffix: "%+", label: "Crop-type classification accuracy", source: "Omdena" },
   { value: "200", suffix: "+", label: "Students mentored in STEM", source: "Kaduna State" },
-  { value: "5,000", suffix: "+", label: "Participants reached by outreach", source: "Haleyouth Foundation" },
-  { value: "400", suffix: "+", label: "Titles curated as co-founder", source: "EduvateKids" },
-];
-
-export const credentialStrip = [
-  "The Marti School",
-  "Western Governors University",
-  "Nabafat AI",
-  "Omdena",
-  "Nile University of Nigeria",
-  "Prince George's County Public Schools",
-  "Haleyouth Foundation",
-  "EduvateKids",
-  "Google",
-  "Udacity",
-  "NITDA Future-Hack",
+  { value: "12", suffix: "", label: "Teachers trained in digital tools", source: "Kaduna State" },
+  { value: "5,000", suffix: "+", label: "Participants in youth programmes", source: "Haleyouth Foundation" },
+  { value: "90", suffix: "%+", label: "ML classification accuracy", source: "Omdena" },
 ];
 
 export const profile = {
+  summary:
+    "I am a school principal and educator with a background in computer science and data analytics. My work sits where learning, data, and people meet: I build small, useful data and AI tools for schools and youth programmes, then train the teachers and staff who run them.",
   paragraphs: [
     "I trained as a computer scientist at Nile University of Nigeria and graduated in 2018 with a 3.69 grade point average (GPA), in the top 2% of my class. Coursework in artificial intelligence (AI), digital image processing, and network security set the direction for what came next.",
     "Since 2021 I have built computer vision and remote-sensing pipelines as a volunteer machine learning (ML) engineer with Omdena. In June 2025 I completed a Master of Science (MSc) in Data Analytics at Western Governors University (WGU), and in 2025 I spent six months as a data analyst intern at Nabafat AI. The part of the work I value most is the front end: sitting with a team to learn what they need, building the tool, then teaching people who do not code to run the tool themselves.",
@@ -67,8 +55,37 @@ export const profile = {
   ],
 };
 
+export const education = [
+  {
+    degree: "Master of Science (MSc), Data Analytics",
+    focus: "Decision Process Engineering",
+    school: "Western Governors University",
+    year: "June 2025",
+    points: [
+      "Three micro-credential awards: Data Analytics Professional, Data Operations, Decision Process Engineer.",
+      "Capstone: predictive analysis of diabetes progression with machine learning, from data to modelling, evaluation, and storytelling.",
+    ],
+  },
+  {
+    degree: "Bachelor of Science (BSc), Computer Science",
+    focus: "",
+    school: "Nile University of Nigeria",
+    year: "September 2018",
+    points: [
+      "GPA 3.69 of 4.0. Top 2% of the graduating class and third best graduating student.",
+      "Coursework in artificial intelligence, digital image processing, and network security.",
+    ],
+  },
+];
+
+export const languages = [
+  { name: "English", level: "Full professional" },
+  { name: "French", level: "Conversational, lived and studied in France" },
+  { name: "Turkish", level: "Conversational, lived and studied in Turkey" },
+];
+
 export type Expertise = {
-  icon: "chart" | "brain" | "workflow" | "school" | "users" | "store";
+  icon: "chart" | "brain" | "school" | "users";
   title: string;
   body: string;
   skills: string[];
@@ -76,40 +93,28 @@ export type Expertise = {
 
 export const expertise: Expertise[] = [
   {
+    icon: "school",
+    title: "Education leadership",
+    body: "Leading a school community of students, teachers, and parents, with clear expectations and steady support.",
+    skills: ["School leadership", "Teacher development", "Parent partnership", "Admissions"],
+  },
+  {
     icon: "chart",
-    title: "Data analytics and business intelligence",
-    body: "Exploratory analysis, statistical modelling, and dashboards for teams who need numbers they trust.",
+    title: "Learning data and analytics",
+    body: "Analysis and dashboards to follow progress and guide decisions, explained in plain language.",
     skills: ["Python, SQL, R", "Power BI and Tableau", "Exploratory data analysis (EDA)", "Data storytelling"],
   },
   {
     icon: "brain",
-    title: "Machine learning and computer vision",
-    body: "Predictive models and image pipelines, from data preparation through evaluation and deployment.",
-    skills: ["Scikit-learn", "TensorFlow and PyTorch", "OpenCV", "Remote sensing"],
-  },
-  {
-    icon: "workflow",
-    title: "AI tools and automation",
-    body: "Small AI and no-code tools for schools and youth programmes, built with the people who will run them.",
-    skills: ["Prompt design", "Zapier and Make", "Form-to-CRM workflows", "ETL with Apache Airflow"],
-  },
-  {
-    icon: "school",
-    title: "School leadership and STEM education",
-    body: "Leading a school community of students, teachers, and parents, built on years of project-based STEM teaching.",
-    skills: ["School leadership", "Teacher development", "Curriculum design", "Parent partnership"],
+    title: "AI and machine learning",
+    body: "Predictive models and small AI tools for schools and youth programmes, built with the people who run them.",
+    skills: ["Scikit-learn", "TensorFlow", "Prompt design", "Zapier and Make"],
   },
   {
     icon: "users",
-    title: "Programme leadership and community",
-    body: "Coordination of outreach programmes, volunteers, and partners from plan to impact report.",
-    skills: ["Programme coordination", "Stakeholder communication", "Impact reporting", "Content strategy"],
-  },
-  {
-    icon: "store",
-    title: "Entrepreneurship and brand building",
-    body: "Founder experience across retail and education, from supplier contracts to digital storefronts.",
-    skills: ["Operations and P&L", "Brand and marketing", "Partner relationships", "Event management"],
+    title: "Teaching and programme design",
+    body: "Project-based STEM teaching, teacher training, and youth programmes from plan to impact report.",
+    skills: ["Curriculum design", "Teacher training", "Workshop facilitation", "Programme coordination"],
   },
 ];
 
@@ -252,22 +257,13 @@ export type Work = {
 
 export const work: Work[] = [
   {
-    tag: "Remote sensing",
-    year: "Omdena",
-    title: "Crop-type classification from satellite imagery",
-    context: "Collaborative AI project with a distributed international team.",
+    tag: "STEM education",
+    year: "2021 to 2022",
+    title: "Project-based STEM curriculum and teacher training",
+    context: "Kaduna State Government Education Board, Nigeria.",
     contribution:
-      "Built a computer vision pipeline on satellite imagery which reached over 90% crop-type classification accuracy.",
-    tools: ["Python", "TensorFlow", "OpenCV", "Multispectral imagery"],
-  },
-  {
-    tag: "Energy siting",
-    year: "Omdena",
-    title: "Solar-panel site selection",
-    context: "Geospatial analysis for renewable energy planning.",
-    contribution:
-      "Automated solar-site selection, cutting manual survey time by 40%, and put the results into a dashboard the field team used to pick sites.",
-    tools: ["Python", "Remote sensing", "Object detection", "Dashboards"],
+      "Built a project-based STEM curriculum for grades 7 to 12, ran weekly workshops and capstone tracks, mentored over 200 students, and trained 12 teachers on Google Classroom and digital tools, lifting STEM lesson adoption by 20%.",
+    tools: ["Curriculum design", "Google Classroom", "Capstone projects", "Teacher training"],
   },
   {
     tag: "Healthcare analytics",
@@ -279,77 +275,22 @@ export const work: Work[] = [
     tools: ["Python", "Scikit-learn", "Pandas", "Statistical testing"],
   },
   {
-    tag: "Health technology",
-    year: "2019",
-    title: "LifeLine",
-    context: "Future-Hack, National Information Technology Development Agency (NITDA), Nigeria.",
-    contribution: "LifeLine, a health technology solution, placed second nationally at the NITDA Future-Hack.",
-    tools: ["Product design", "Prototyping", "Pitching"],
-  },
-];
-
-export type Milestone = { year: string; title: string; body: string };
-
-export const journey: Milestone[] = [
-  {
-    year: "2017",
-    title: "Founded MeeFa Fashion",
-    body: "A women's apparel brand in Kaduna, Nigeria, now with more than 50 retail partners.",
+    tag: "Workflow automation",
+    year: "2023 to present",
+    title: "AI workflows for an education platform",
+    context: "EduvateKids, Maryland.",
+    contribution:
+      "Automated form-to-CRM sync, reminder sequences, and reporting with AI assistants, Zapier, and Make, with a human review of every AI-drafted answer before the answer reaches families.",
+    tools: ["Zapier", "Make", "Prompt design", "Process documentation"],
   },
   {
-    year: "2018",
-    title: "BSc Computer Science, Nile University of Nigeria",
-    body: "Top 2% of the graduating class and third best graduate, with the Academic Excellence Award.",
-  },
-  {
-    year: "2019",
-    title: "Second place, NITDA Future-Hack",
-    body: "National recognition for LifeLine, a health technology solution.",
-  },
-  {
-    year: "2020",
-    title: "Programme Coordinator, Haleyouth Foundation",
-    body: "Youth empowerment and girl-child education programmes across Nigeria. Project management certificate from Coursera.",
-  },
-  {
-    year: "2021",
-    title: "ML engineering and STEM teaching",
-    body: "Began volunteer ML engineering with Omdena and taught STEM for the Kaduna State Government Education Board.",
-  },
-  {
-    year: "2022",
-    title: "Three professional certifications",
-    body: "Google Data Analytics, the Udacity Data Analyst Nanodegree, and Power BI Data Analyst.",
-  },
-  {
-    year: "2023",
-    title: "Co-Founder and CEO, EduvateKids",
-    body: "Co-founded an Islamic education platform for families and schools across North America.",
-  },
-  {
-    year: "2024",
-    title: "STEM Educator, Prince George's County Public Schools",
-    body: "Classroom STEM teaching across grade levels in Laurel, Maryland.",
-  },
-  {
-    year: "June 2025",
-    title: "MSc Data Analytics, Western Governors University",
-    body: "Decision Process Engineering focus, a capstone on diabetes progression, and three micro-credential awards.",
-  },
-  {
-    year: "2025",
-    title: "Data Analyst Intern, Nabafat AI",
-    body: "A six-month internship delivering analytics and ML projects, dashboards, and reporting standards.",
-  },
-  {
-    year: "2026",
-    title: "Principal, The Marti School",
-    body: "Leading a Saturday school in Columbia, Maryland, and its community of students, teachers, and parents.",
-  },
-  {
-    year: "Now",
-    title: "Leading where data and education meet",
-    body: "Taking on roles and projects where analysis, ML, and education meet a real decision.",
+    tag: "Remote sensing",
+    year: "2021 to present",
+    title: "Crop-type classification from satellite imagery",
+    context: "Omdena, collaborative AI project with an international team.",
+    contribution:
+      "Built a computer vision pipeline on satellite imagery which reached over 90% crop-type classification accuracy.",
+    tools: ["Python", "TensorFlow", "OpenCV", "Satellite imagery"],
   },
 ];
 
@@ -373,11 +314,23 @@ export const awards: Credential[] = [
   { title: "Academic Excellence Award", issuer: "Nile University of Nigeria, third best graduate", year: "2018" },
 ];
 
-// Confirm this list with the owner before launch.
-export const learningFocus = [
-  { title: "ML operations (MLOps)", body: "Deploying, monitoring, and versioning models with MLflow, DVC, and Kubeflow." },
-  { title: "Large language model (LLM) applications", body: "Retrieval, evaluation, and safe use of language models in workflows." },
-  { title: "AI in education", body: "Data and AI tools to support teachers, learners, and families." },
+// Proposed research interests, drawn from her roles. Confirm with the owner.
+export const researchInterests = [
+  {
+    title: "Data-informed school improvement",
+    body: "How attendance, progress, and assessment data shape decisions by school leaders, teachers, and parents.",
+    evidence: "Principal, The Marti School. Dashboards at Nabafat AI.",
+  },
+  {
+    title: "AI in teaching and learning",
+    body: "How teachers adopt small AI tools, and what training and safeguards help those tools serve learners.",
+    evidence: "AI workflows at EduvateKids. Teacher training in Kaduna.",
+  },
+  {
+    title: "Community and heritage-language schools",
+    body: "Learning, identity, and family engagement among multilingual children in community-run schools.",
+    evidence: "Saturday school leadership. Life and study across four countries.",
+  },
 ];
 
 export const toolkit: { group: string; items: string[] }[] = [
@@ -391,35 +344,19 @@ export const toolkit: { group: string; items: string[] }[] = [
 
 export type EnquiryType = "role" | "consulting" | "research" | "speaking" | "support" | "other";
 
-export const engagements: { type: EnquiryType; title: string; body: string }[] = [
-  { type: "role", title: "Full-time and contract roles", body: "Data analyst, ML engineer, business intelligence, EdTech, and education leadership positions." },
-  { type: "consulting", title: "Consulting projects", body: "Scoped analytics, dashboard, or automation work with a clear outcome." },
-  { type: "research", title: "Education and impact partnerships", body: "Programmes, curricula, and research with schools and nonprofits." },
-  { type: "speaking", title: "Speaking and mentoring", body: "Talks, workshops, and mentoring for people entering data and STEM careers." },
-  { type: "support", title: "Virtual professional support", body: "Analytics, research, design, and automation support on a flexible basis." },
-];
-
 export const enquiryLabels: Record<EnquiryType, string> = {
   role: "Full-time or contract role",
   consulting: "Consulting project",
-  research: "Education or impact partnership",
+  research: "Research or education collaboration",
   speaking: "Speaking or mentoring",
   support: "Virtual professional support",
   other: "Something else",
 };
 
-export const process = [
-  { title: "Conversation", body: "We agree on the goal, the constraints, and what success looks like." },
-  { title: "Proposal", body: "You receive a written scope, timeline, and price before any work begins." },
-  { title: "Delivery", body: "I share progress at agreed points and flag risks as soon as they appear." },
-  { title: "Follow-through", body: "Handover includes documentation, so your team owns the result." },
-];
-
 export const nav = [
-  { href: "#profile", label: "Profile" },
-  { href: "#expertise", label: "Expertise" },
-  { href: "#experience", label: "Experience" },
-  { href: "#work", label: "Work" },
-  { href: "#journey", label: "Journey" },
-  { href: "#engage", label: "Engage" },
+  { href: "/#profile", label: "Profile" },
+  { href: "/#research", label: "Research" },
+  { href: "/#expertise", label: "Expertise" },
+  { href: "/#work", label: "Work" },
+  { href: "/cv/", label: "CV" },
 ];

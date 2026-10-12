@@ -19,7 +19,7 @@ export function Availability() {
 
   return (
     <p
-      className="inline-flex max-w-full items-center gap-3 rounded-full border border-line-dark bg-navy/60 py-2 pr-4 pl-3 text-[0.8125rem] text-mist backdrop-blur"
+      className="inline-flex max-w-full items-center gap-3 rounded-2xl border border-line-dark bg-navy/60 py-2 pr-4 pl-3 text-[0.8125rem] text-mist backdrop-blur"
       aria-live="polite"
     >
       <span
@@ -29,7 +29,7 @@ export function Availability() {
           s.available ? "animate-pulse-ring bg-green-400" : "bg-mist",
         )}
       />
-      <span className="truncate">
+      <span className="leading-snug">
         <span className="sr-only">{s.available ? "Available. " : "Not taking new work. "}</span>
         {s.statusLine}
       </span>

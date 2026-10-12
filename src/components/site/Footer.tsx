@@ -12,7 +12,7 @@ export function Footer() {
             <p className="font-serif-display text-4xl leading-none md:text-5xl">
               {person.firstName} <span className="text-brass italic">{person.lastName}</span>
             </p>
-            <p className="mt-4 max-w-sm text-mist">{person.role}. Analysis, machine learning, and automation in service of real decisions.</p>
+            <p className="mt-4 max-w-sm text-mist">{person.role}. Data and AI in service of students, teachers, and families.</p>
           </div>
           <nav aria-label="Footer">
             <p className="eyebrow text-brass">Sections</p>
